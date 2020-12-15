@@ -1,5 +1,4 @@
 module.exports = (arg) => {
-	console.log('>>>>>', arg, '<<<<<<')
 	const environs = {
 		dev: {
 			envName: 'dev',
