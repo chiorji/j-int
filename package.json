@@ -5,18 +5,34 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon index.js",
+    "test": "jest --detectOpenHandles --no-cache --runInBand --logHeapUsage  --watchAll",
     "lint": "node_modules/.bin/eslint . --fix --ignore-path .eslintignore --config .eslintrc.yml --global expect,it,describe,afterAll,beforeAll,beforeEach,afterEach,test"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.27"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
     "jest": "^26.6.3",
     "morgan": "^1.9.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
+  },
+   "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 3000,
+    "bail": true,
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   }
 }
