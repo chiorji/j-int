@@ -1,0 +1,21 @@
+{
+  "name": "job-board",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "lint": "node_modules/.bin/eslint . --fix --ignore-path .eslintignore --config .eslintrc.yml --global expect,it,describe,afterAll,beforeAll,beforeEach,afterEach,test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6"
+  }
+}
