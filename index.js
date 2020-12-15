@@ -1,5 +1,5 @@
 require('dotenv').config()
-const config = require('./config')(process.env.NODE_ENV)
+const config = require('./config')('test')
 const app = require('express')()
 const mongoose = require('mongoose')
 
